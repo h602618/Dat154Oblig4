@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EfCoreDialogsState">
+    <option name="keyValueStorage">
+      <map>
+        <entry key="Common:2582af41-5ace-49c3-a5ef-9ea4fb47e0fa:dbContext" value="CustomerWebApp.Context.MyDbContext" />
+        <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:dbContextFolder" value="Context" />
+        <entry key="Common:dbContextName" value="MyDbContext" />
+        <entry key="Common:generateOnConfiguring" value="true" />
+        <entry key="Common:idempotent" value="false" />
+        <entry key="Common:noBuild" value="true" />
+        <entry key="Common:noTransactions" value="false" />
+        <entry key="Common:outputFilePath" value="script.sql" />
+        <entry key="Common:outputFolder" value="Models" />
+        <entry key="Common:provider" value="Npgsql.EntityFrameworkCore.PostgreSQL" />
+        <entry key="Common:useAttributes" value="true" />
+        <entry key="Common:useDatabaseNames" value="true" />
+        <entry key="Common:useDefaultConnection" value="true" />
+        <entry key="Common:usePluralizer" value="false" />
+      </map>
+    </option>
+  </component>
+</project>

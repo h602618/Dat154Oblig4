@@ -1,31 +1,38 @@
-﻿using System.Diagnostics;
+﻿using Lib.Context;
 using Microsoft.AspNetCore.Mvc;
-using CustomerWebApp.Models;
 
 namespace CustomerWebApp.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+    readonly MyDbContext ctx = new();
 
     public IActionResult Index()
     {
+        if (LoginUtil.isLoggedIn(HttpContext.Session))
+        {
+            ViewData["User"] = LoginUtil.getUser(HttpContext.Session);
+        }
+
         return View();
     }
 
-    public IActionResult Privacy()
+    [HttpPost]
+    public IActionResult Login(string username, string password)
     {
-        return View();
-    }
+        if (LoginUtil.isValid(username, password))
+        {
+            var user = ctx.customer.FirstOrDefault(c => c.name == username);
+            if (user != null)
+            {
+                if (LoginUtil.validateUser(username, password, user.name, user.password))
+                {
+                    LoginUtil.logIn(HttpContext.Session, username);
+                    return RedirectToAction("Index", "Customer");
+                }
+            }
+        }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return RedirectToAction("Index");
     }
 }

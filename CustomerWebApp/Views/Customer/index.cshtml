@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "User Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @ViewData["User"]</h1>
+    <a class="btn btn-outline-primary" asp-action="FindRoom">Find Room</a>
+    <a class="btn btn-outline-primary" asp-action="ShowReservations">Show Reservations</a>
+</div>

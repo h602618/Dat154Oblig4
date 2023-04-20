@@ -6,4 +6,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Context\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Lib\Lib.csproj" />
+    </ItemGroup>
+
 </Project>

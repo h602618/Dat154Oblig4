@@ -16,16 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Github\school\dotnet\Dat154Oblig4\CustomerWebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Customer/FindRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRmluZFJvb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Customer/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Customer/ShowReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcU2hvd1Jlc2VydmF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Github/school/dotnet/Dat154Oblig4/CustomerWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]

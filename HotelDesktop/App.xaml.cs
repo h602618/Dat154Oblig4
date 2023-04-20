@@ -13,5 +13,10 @@ namespace HotelDesktop
     /// </summary>
     public partial class App : Application
     {
+        // add room-reservation
+        // remove room-reservation
+        // set checkin status of reservation
+        // register room service requests
+        // register room maintenance requests
     }
 }

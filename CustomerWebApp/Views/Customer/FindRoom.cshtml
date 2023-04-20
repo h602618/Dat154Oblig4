@@ -1,0 +1,69 @@
+﻿@model List<Lib.Models.room>
+@{
+    ViewData["Title"] = "FindRoom Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Find Rooms</h1>
+    <form asp-action="FindRoom" method="get">
+        <div class="form-group">
+            <label for="start">Start Date: </label>
+            <input type="datetime-local" id="start" name="start" class="form-control"
+                   value="@ViewData["StartDate"]" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="end">End Date: </label>
+            <input type="datetime-local" id="end" name="end" class="form-control"
+                   value="@ViewData["EndDate"]" required/>
+        </div>
+
+        <div class="form-control">
+            <label for="beds">Number of beds: </label>
+            <input type="number" id="beds" name="beds"/>
+        </div>
+
+        <div class="form-control">
+            <label for="quality">Room Size: </label>
+            <input type="number" id="quality" name="quality"/>
+        </div>
+
+        <div class="form-control">
+            <label for="size">Room Size: </label>
+            <input type="number" id="size" name="size"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search Avaliable Rooms</button>
+    </form>
+    <hr/>
+
+    <table class="table table-sm table-striped">
+        <thead>
+        <tr>
+            <td>Beds</td>
+            <td>Size</td>
+            <td>Quality</td>
+            <td>Action</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach(var room in Model)
+        {
+            <tr>
+                <td>@room.beds</td>
+                <td>@room.size</td>
+                <td>@room.quality</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="roomId" value="@room.nr"/>
+                        <input type="hidden" name="start" value="@ViewData["StartDate"]"/>
+                        <input type="hidden" name="end" value="@ViewData["EndDate"]"/>
+                        <button class="btn btn-sm btn-primary" asp-action="BookRoom">Book</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

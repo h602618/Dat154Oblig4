@@ -1,0 +1,36 @@
+﻿@model List<Lib.Models.reservations>
+
+@{
+    ViewData["Title"] = "Reservations Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Show Reservations</h1>
+
+    <table class="table table-sm table-striped">
+        <thead>
+        <tr>
+            <td>Beds</td>
+            <td>Quality</td>
+            <td>Size</td>
+            <td>Start</td>
+            <td>End</td>
+            <td>Status</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach(var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.roomNrNavigation.beds</td>
+                <td>@reservation.roomNrNavigation.quality</td>
+                <td>@reservation.roomNrNavigation.size</td>
+                <td>@reservation.start</td>
+                <td>@reservation.end</td>
+                <td>@reservation.status</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
