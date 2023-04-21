@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows.Input;
+using Lib.Models;
 
 namespace HotelDesktop
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainView.cs.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
-        public MainWindow()
+        MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainView();
+        }
+
+        void RoomsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (RoomsListView.SelectedItem is room selectedRoom)
+            {
+                new RoomDetailsWindow(selectedRoom).Show();
+            }
         }
     }
 }

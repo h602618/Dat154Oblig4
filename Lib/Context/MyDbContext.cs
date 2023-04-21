@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Lib.Context;
 
-public partial class MyDbContext : DbContext
+public class MyDbContext : DbContext
 {
     public MyDbContext()
     {
@@ -56,9 +56,5 @@ public partial class MyDbContext : DbContext
 
             entity.Property(e => e.nr).ValueGeneratedNever();
         });
-
-        OnModelCreatingPartial(modelBuilder);
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

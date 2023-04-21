@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelDesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainView.cs" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainView />
+    </Window.DataContext>
     <Grid>
-
+        <ListView x:Name="RoomsListView" ItemsSource="{Binding .Rooms}"
+                  MouseDoubleClick="RoomsListView_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="#" DisplayMemberBinding="{Binding .nr}" />
+                    <GridViewColumn Header="Beds" DisplayMemberBinding="{Binding beds}" />
+                    <GridViewColumn Header="Quality" DisplayMemberBinding="{Binding quality}" />
+                    <GridViewColumn Header="Size" DisplayMemberBinding="{Binding size}" />
+                    <GridViewColumn Header="Reservations" DisplayMemberBinding="{Binding reservations.Count}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

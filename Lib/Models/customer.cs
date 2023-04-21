@@ -3,10 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Lib.Models;
 
-public partial class customer
+public class customer
 {
-    [Key]
-    public int id { get; set; }
+    [Key] public int id { get; set; }
 
     public string name { get; set; } = null!;
 

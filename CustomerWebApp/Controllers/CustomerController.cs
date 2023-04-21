@@ -54,8 +54,8 @@ public class CustomerController : Controller
                 end = DateTime.Now.AddDays(1);
             }
 
-            ViewData["StartDate"] = start.GetValueOrDefault().ToString("yyyy-MM-ddTHH:mm");
-            ViewData["EndDate"] = end.GetValueOrDefault().ToString("yyyy-MM-ddTHH:mm");
+            ViewData["StartDate"] = start.GetValueOrDefault().ToString("yyyy-MM-dd");
+            ViewData["EndDate"] = end.GetValueOrDefault().ToString("yyyy-MM-dd");
 
             return View(rooms.ToList());
         }
